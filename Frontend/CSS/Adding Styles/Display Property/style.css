@@ -1,11 +1,38 @@
 #div1{
     background-color: red;
     height: 200px;
-    width: 200px; 
+    width: 200px;
 }
 
 #div2{
     background-color: chartreuse;
     height: 200px;
     width: 200px;
+    /* margin-left: -4px; */
+}
+
+/* span{
+    display: block;
+    visibility: hidden;
+    margin: 50px 0;
+    padding: 0;
+    color: red;
+} */
+
+div{
+    display: inline-block;
+}
+
+#p1{
+    display: inline-block;
+}
+
+#p2{
+    display: inline;
+}
+
+#inner-div1{
+    height: 50%;
+    width: 50%;
+    background-color: darkgreen;
 }

@@ -1,0 +1,42 @@
+body{
+    font-family: sans-serif;
+}
+
+.intro{
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+.widget{
+    display: inline-block;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 20%;
+    vertical-align: top;
+    align-content: center;
+}
+
+.widget-item{
+    margin: 10px;
+}
+
+.article{
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+button[type="submit"]{
+    display: block;
+    background-color: black;
+    color: white;
+    margin: auto;
+    padding: 1em;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover{
+    background-color: orange;
+    cursor: pointer;
+}
