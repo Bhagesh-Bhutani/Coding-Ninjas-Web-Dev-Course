@@ -25,6 +25,10 @@ a{
     list-style: none;
     margin: 0;
     padding: 0;
+    /* width: 500px; */
+    /* height: 100%; */
+    white-space: nowrap;
+    overflow: auto;
 }
 
 #nav-section>ul li{
@@ -48,7 +52,7 @@ a{
 #my_name{
     color: white;
     font-size: 3.5rem;
-    margin-top : 10rem
+    margin-top : 5rem
 }
 
 #social-icons{
@@ -72,4 +76,32 @@ a{
 
 #social-icons li a:hover{
     box-shadow: 0 0 6px 4px rgba(230,196,196,0.2);
+}
+
+#img-container{
+    margin-top: 1rem;
+}
+
+#img-container img{
+    border-radius: 50%;
+    border: solid lightgray 2px;
+    box-shadow: 0 0 6px 4px rgba(219, 211, 211, 0.548);
+}
+
+#about{
+    margin-top: -10rem;
+}
+
+#about h1{
+    font-size: 2.5rem;
+}
+
+
+
+#about-content{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: justify;
 }
