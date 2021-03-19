@@ -1,0 +1,32 @@
+#container{
+    height: 500px;
+    width: 500px;
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#container div{
+    /* height: 100px; */
+    height: 100px;
+    /* max-height: 400px; */
+    width: 100px;
+}
+
+#div1{
+    background-color: red;
+    /* margin: 10px; */
+}
+
+#div2{
+    background-color: cyan;
+    /* margin: 20px; */
+}
+
+#div3{
+    background-color: grey;
+    /* margin: 50px; */
+}
