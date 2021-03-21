@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     font-family: sans-serif;
 }
@@ -12,6 +16,7 @@ header{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    opacity: 0.9;
 }
 
 a{
@@ -52,7 +57,7 @@ a{
 #my_name{
     color: white;
     font-size: 3.5rem;
-    margin-top : 5rem
+    margin-top : 4.5rem
 }
 
 #social-icons{
@@ -86,22 +91,113 @@ a{
     border-radius: 50%;
     border: solid lightgray 2px;
     box-shadow: 0 0 6px 4px rgba(219, 211, 211, 0.548);
+    transition: box-shadow, 0.5s;
+    position: relative;
+}
+
+#img-container img:hover{
+    box-shadow: 0 0 6px 10px rgba(219, 211, 211, 0.548);   
 }
 
 #about{
     margin-top: -10rem;
 }
 
-#about h1{
-    font-size: 2.5rem;
-}
-
-
-
 #about-content{
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    width: 70%;
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: justify;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-heading{
+    color: #429bb8;
+    font-size: 2.5rem;
+}
+
+.skill-bar{
+    margin: 2rem;
+}
+
+.skill-outer{
+    width: 10rem;
+    height: 2rem;
+    background-color: lightgray;
+    border-radius: 1rem;
+}
+
+.skill-inner{
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.skill-inner>h1{
+    margin: 0;
+    margin-left: 5%;
+    /* margin: auto; */
+    font-size: 1.3rem;
+    color: white;
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ninety-percent{
+    width: 90%;
+}
+
+.eighty-percent{
+    width: 80%;
+}
+
+.seventy-percent{
+    width: 70%;
+}
+
+.eighty-five-percent{
+    width: 85%;
+}
+
+.seventy-five-percent{
+    width: 75%;
+}
+
+.bg-blue{
+    background-color: blue;
+}
+
+.bg-green{
+    background-color: green;
+}
+
+.bg-gray{
+    background-color: gray;
+}
+
+.bg-yellow{
+    background-color: rgb(253, 215, 1);
+}
+
+.bg-sea{
+    background-color: darkseagreen;
+}
+
+.bg-brown{
+    background-color: brown;
+}
+
+section:nth-child(2n){
+    background-color: rgb(245,245,245);
 }
