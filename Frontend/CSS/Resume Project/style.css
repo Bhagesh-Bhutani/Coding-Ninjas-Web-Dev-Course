@@ -60,26 +60,26 @@ a{
     margin-top : 4.5rem
 }
 
-#social-icons{
+.social-icons{
     list-style: none;
     padding: 0;
     margin: 0;
     display: inline-block;
 }
 
-#social-icons li{
+.social-icons li{
     display: inline-block;
     margin-left: 1.2rem;
 }
 
-#social-icons li a{
+.social-icons li a{
     font-size: 1.3rem;
     padding: 0.5rem;
     transition: box-shadow 0.3s;
     border-radius: 50%;
 }
 
-#social-icons li a:hover{
+.social-icons li a:hover{
     box-shadow: 0 0 6px 4px rgba(230,196,196,0.2);
 }
 
@@ -152,6 +152,7 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 80%;
 }
 
 .ninety-percent{
@@ -200,4 +201,76 @@ section{
 
 section:nth-child(2n){
     background-color: rgb(245,245,245);
+}
+
+#contact{
+    background: linear-gradient(to top right, #2857a4, #403066);
+}
+
+#contact>h1{
+    color: white;
+}
+
+#contact-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 80%;
+    color: white;
+}
+
+input, textarea{
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 1rem 1rem 1rem 0;
+}
+
+input {
+    height: 2rem;
+    color: white;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    border-bottom: solid white 2px;
+    outline: none;
+    background-color: transparent;
+}
+
+textarea{
+    resize: none;
+    color: white;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    border-bottom: solid white 2px;
+    outline: none;
+    background-color: transparent;
+}
+
+#send-msg, #my-details{
+    padding: 1rem;
+}
+
+#send-msg{
+    margin: 1rem;
+    width: 50%;
+}
+
+#my-details{
+    margin: 1rem;
+    width: 50%;
+}
+
+#my-details>h2{
+    margin: 0;
+}
+button[type="submit"]{
+    all: unset;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.8rem;
+    border: solid white 5px;
+    border-radius: 7px;
 }
