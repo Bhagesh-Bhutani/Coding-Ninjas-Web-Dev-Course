@@ -110,7 +110,7 @@ main{
 }
 
 .section{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 main>div{
@@ -383,6 +383,7 @@ main>div{
     padding: 1.5rem;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 .latest-english-card:hover{
@@ -395,7 +396,6 @@ main>div{
     width: 10rem;
     background-size: 100%;
     background-position: center;
-    transition: 0.3s ease-in-out;
 }
 
 /* Media Queries for Desktop first Approach */
@@ -411,6 +411,10 @@ main>div{
     .categories-card{
         height: calc(5*10rem/6);
         width: calc(5*17rem/6);
+    }
+    .latest-english-img{
+        height: 8.5rem;
+        width: 8.5rem;
     }
 }
 
@@ -434,6 +438,10 @@ main>div{
     }
     .categories-card-text{
         font-size: 1.7rem;
+    }
+    .latest-english-img{
+        height: 7.5rem;
+        width: 7.5rem;
     }
 }
 
@@ -467,6 +475,10 @@ main>div{
     .categories-card-text{
         font-size: 1.5rem;
     }
+    .latest-english-img{
+        height: 6rem;
+        width: 6rem;
+    }
 }
 
 @media screen and (max-width: 576px){
@@ -483,10 +495,10 @@ main>div{
         font-size: 1rem;
     }
     .song-desc{
-        font-size: 0.65rem;
+        font-size: 0.8rem;
     }
     .song-no{
-        font-size: 0.65rem;
+        font-size: 0.8rem;
     }
     .heart-icon{
         font-size: 0.8rem;
@@ -504,5 +516,9 @@ main>div{
     }
     .right-side-queue{
         width: 40%;
+    }
+    .latest-english-img{
+        height: 4rem;
+        width: 4rem;
     }
 }
