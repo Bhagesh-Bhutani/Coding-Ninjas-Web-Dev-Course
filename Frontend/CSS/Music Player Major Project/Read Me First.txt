@@ -1,0 +1,9 @@
+Sir/ma'am
+
+Just launch the index.html file and you can view my project.
+
+Note:
+Single Artist page can be accessed by clicking on any of the popular artists.
+
+Regards
+Bhagesh Bhutani

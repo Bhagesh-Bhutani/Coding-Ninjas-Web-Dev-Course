@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <!-- header contains top nav bar -->
+    <header>
+        <div class = "nav-bar">
+            <div><img id = "music-icon" class = "logo" src="images/music_player_icon.png" alt=""><span id = "logo-text"><b>Studio</b></span></div>
+            <div class = "nav-content">
+                <div class = "search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" name="" id="" placeholder="Search...">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <div>
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div>
+                    <img id = "profile-pic" src="images/profile_pic.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main, divided into 2 divs, main content and playlist dropdown -->
+    <main>
+        <div class = "main-content">
+            <section id = "carousel section">
+                <div class = "carousel-container">
+                    <div class = "mj-cover"></div>
+                    <div class = "ryan-jones-cover"></div>
+                    <div class = "linkin-park-cover"></div>
+                </div>
+            </section>
+
+            <section class = "latest-release section">
+                <h2>Latest Release</h2>
+                <div class = "latest-release-container">
+                    <div class = "latest-release-card">
+                        <img class = "card-image" src="images/linkin-park-cover.jpg" alt="">
+                        <div class = "card-desc">
+                            <div class = "song-desc">Linkin Park</div>
+                            <div class = "song-artist song-desc">7th April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-release-card">
+                        <img class = "card-image" src="images/linkin-park-cover.jpg" alt="">
+                        <div class = "card-desc">
+                            <div class = "song-desc">Linkin Park</div>
+                            <div class = "song-artist song-desc">7th April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-release-card">
+                        <img class = "card-image" src="images/linkin-park-cover.jpg" alt="">
+                        <div class = "card-desc">
+                            <div class = "song-desc">Linkin Park</div>
+                            <div class = "song-artist song-desc">7th April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-release-card">
+                        <img class = "card-image" src="images/linkin-park-cover.jpg" alt="">
+                        <div class = "card-desc">
+                            <div class = "song-desc">Linkin Park</div>
+                            <div class = "song-artist song-desc">7th April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-release-card">
+                        <img class = "card-image" src="images/linkin-park-cover.jpg" alt="">
+                        <div class = "card-desc">
+                            <div class = "song-desc">Linkin Park</div>
+                            <div class = "song-artist song-desc">7th April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-release-card">
+                        <img class = "card-image" src="images/linkin-park-cover.jpg" alt="">
+                        <div class = "card-desc">
+                            <div class = "song-desc">Linkin Park</div>
+                            <div class = "song-artist song-desc">7th April 2021</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class = "popular-artists section">
+                <h2>Popular Artists</h2>
+                <div class = "popular-artists-container">
+                    <div class = "popular-artists-wrapper text-center">
+                        <a href = "#">
+                            <div class = "popular-artists-card ed-sheeran-cover">
+                                
+                            </div>
+                        </a>
+                        <div class = "popular-artists-name">Ed-Sheeran</div>
+                    </div>
+
+                    <div class = "popular-artists-wrapper text-center">
+                        <a href = "#">
+                            <div class = "popular-artists-card coldplay-cover">
+                                
+                            </div>
+                        </a>
+                        <div class = "popular-artists-name">ColdPlay</div>
+                    </div>
+
+                    <div class = "popular-artists-wrapper text-center">
+                        <a href = "#">
+                            <div class = "popular-artists-card mj-cover">
+                                
+                            </div>
+                        </a>
+                        <div class = "popular-artists-name">Michael Jackson</div>
+                    </div>
+
+                    <div class = "popular-artists-wrapper text-center">
+                        <a href = "#">
+                            <div class = "popular-artists-card ryan-jones-cover">
+                                
+                            </div>
+                        </a>
+                        <div class = "popular-artists-name">Ryan Jones</div>
+                    </div>
+
+                    <div class = "popular-artists-wrapper text-center">
+                        <a href = "#">
+                            <div class = "popular-artists-card ed-sheeran-cover">
+                                
+                            </div>
+                        </a>
+                        <div class = "popular-artists-name">Ed-Sheeran</div>
+                    </div>
+
+                    <div class = "popular-artists-wrapper text-center">
+                        <a href = "#">
+                            <div class = "popular-artists-card coldplay-cover">
+                                
+                            </div>
+                        </a>
+                        <div class = "popular-artists-name">ColdPlay</div>
+                    </div>
+
+                    <div class = "popular-artists-wrapper text-center">
+                        <a href = "#">
+                            <div class = "popular-artists-card ryan-jones-cover">
+                                
+                            </div>
+                        </a>
+                        <div class = "popular-artists-name">Ryan Jones</div>
+                    </div>
+
+                    <div class = "popular-artists-wrapper text-center">
+                        <a href = "#">
+                            <div class = "popular-artists-card linkin-park-cover">
+                                
+                            </div>
+                        </a>
+                        <div class = "popular-artists-name">Linkin Park</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class = "music-categories section">
+                <div class = "categories-container">
+                    <div class = "categories-card party-cover">
+                        <div class = "categories-card-text">
+                            Party
+                        </div>
+                    </div>
+
+                    <div class = "categories-card electronic-cover">
+                        <div class = "categories-card-text">
+                            Electronic
+                        </div>
+                    </div>
+
+                    <div class = "categories-card hometrip-cover">
+                        <div class = "categories-card-text">
+                            Home Trip
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class = "latest-english section">
+                <h2>Latest English</h2>
+                <div class = "latest-english-container">
+                    <div class = "latest-english-card">
+                        <div class = "latest-english-img retro-cover">
+
+                        </div>
+                        <div class = "latest-english-text">
+                            <div class = "song-desc">Onism</div>
+                            <div class = "song-artist">7 April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-english-card">
+                        <div class = "latest-english-img retro-cover">
+
+                        </div>
+                        <div class = "latest-english-text">
+                            <div class = "song-desc">Onism</div>
+                            <div class = "song-artist">7 April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-english-card">
+                        <div class = "latest-english-img retro-cover">
+
+                        </div>
+                        <div class = "latest-english-text">
+                            <div class = "song-desc">Onism</div>
+                            <div class = "song-artist">7 April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-english-card">
+                        <div class = "latest-english-img retro-cover">
+
+                        </div>
+                        <div class = "latest-english-text">
+                            <div class = "song-desc">Onism</div>
+                            <div class = "song-artist">7 April 2021</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class = "latest-hindi section">
+                <h2>Latest Hindi</h2>
+                <div class = "latest-english-container">
+                    <div class = "latest-english-card">
+                        <div class = "latest-english-img retro-cover">
+
+                        </div>
+                        <div class = "latest-english-text">
+                            <div class = "song-desc">Onism</div>
+                            <div class = "song-artist">7 April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-english-card">
+                        <div class = "latest-english-img retro-cover">
+
+                        </div>
+                        <div class = "latest-english-text">
+                            <div class = "song-desc">Onism</div>
+                            <div class = "song-artist">7 April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-english-card">
+                        <div class = "latest-english-img retro-cover">
+
+                        </div>
+                        <div class = "latest-english-text">
+                            <div class = "song-desc">Onism</div>
+                            <div class = "song-artist">7 April 2021</div>
+                        </div>
+                    </div>
+
+                    <div class = "latest-english-card">
+                        <div class = "latest-english-img retro-cover">
+
+                        </div>
+                        <div class = "latest-english-text">
+                            <div class = "song-desc">Onism</div>
+                            <div class = "song-artist">7 April 2021</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class = "right-side-queue">
+            <h2>My Playlist</h2>
+            <div class = "side-songs-container">
+                <div class = "song-item">
+                    <span class = "song-no">01</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">02</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">03</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">04</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">05</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">06</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">07</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">08</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">09</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">10</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">11</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">12</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">13</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">14</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+
+                <div class = "song-item">
+                    <span class = "song-no">15</span>
+                    <img src="images/ryan-jones-cover.jpg" alt="">
+                    <div class = "song-desc">
+                        <div class = "song-name">Mirage</div>
+                        <div class = "song-artist">Else</div>
+                    </div>
+                    <div class = "heart-icon">
+                        <i class="far fa-heart" aria-hidden></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
