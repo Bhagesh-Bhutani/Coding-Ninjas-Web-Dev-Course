@@ -1,0 +1,14 @@
+.border-dark{
+    border-width: 5px !important;
+}
+
+.my-container>.row div{
+    height: 200px;
+    background-color: var(--my-color1);
+    border: solid black 1px;
+    color: orange;
+}
+
+:root{
+    --my-color1: blue;
+}

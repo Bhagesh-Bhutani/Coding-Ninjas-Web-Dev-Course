@@ -1,0 +1,37 @@
+html{
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    grid-auto-rows: minmax(100px, auto);
+    /* grid-row-gap: 1rem;
+    grid-column-gap: 2rem; */
+}
+
+.container>div{
+    padding: 1rem;
+}
+
+.container>div:nth-child(2n){
+    background-color: gray;
+}
+
+.container>div:nth-child(2n+1){
+    background-color: #ddd;
+}
+
+.nested{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.nested>div{
+    /* margin: 1rem; */
+    padding: 1rem;
+    border: solid black 1px;
+    /* border-radius: 1rem; */
+}

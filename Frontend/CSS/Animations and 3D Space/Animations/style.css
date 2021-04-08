@@ -1,0 +1,32 @@
+#div1{
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    height: 200px;
+    width: 200px;
+    background-color: turquoise;
+    animation-name: rotate,reduceSize,borderRadius;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes rotate{
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes reduceSize{
+    to{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes borderRadius{
+    to{
+        border-radius: 50%;
+    }
+}

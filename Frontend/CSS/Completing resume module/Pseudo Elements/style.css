@@ -1,0 +1,25 @@
+*{
+    font-family: sans-serif;
+}
+
+#text{
+    background-color: gray;
+}
+
+#text::before{
+    content: "hello ";
+}
+
+#text::after{
+    content: "";
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png");
+    background-size: contain;
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+p.name{
+    background-color: red;
+}

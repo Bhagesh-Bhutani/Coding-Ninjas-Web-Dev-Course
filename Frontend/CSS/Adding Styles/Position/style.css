@@ -28,11 +28,11 @@
 
 #inner-div2{
     background-color: brown;
-    /* position: absolute; */
+    position: absolute;
     height: 200px;
     width: 200px;
-    /* top: 30px; */
-    /* left: 100px; */
+    top: 100px;
+    left: 100px;
 }
 
 #inner-div3{
@@ -40,7 +40,7 @@
     height: 200px;
     width: 200px;
     position: sticky;
-    top: 10px;
+    top: 2%;
 }
 
 #outer-div2{

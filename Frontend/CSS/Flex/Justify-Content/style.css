@@ -3,8 +3,8 @@
     width: 500px;
     background-color: lightgray;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

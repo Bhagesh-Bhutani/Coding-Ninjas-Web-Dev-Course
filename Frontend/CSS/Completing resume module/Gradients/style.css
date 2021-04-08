@@ -1,0 +1,7 @@
+#container{
+    height: 400px;
+    width: 400px;
+    margin: 40px;
+    border: solid black 2px;
+    background: repeating-linear-gradient(to left bottom , red,blue 2px);
+}
