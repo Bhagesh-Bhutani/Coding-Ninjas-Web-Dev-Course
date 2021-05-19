@@ -1,9 +1,19 @@
 Sir/ma'am
 
+IMPORTANT: Kindly unzip the contents inside a folder and then click in index.html.
+
 Just launch the index.html file and you can view my project.
 
 Note:
-Single Artist page can be accessed by clicking on any of the popular artists.
+Single Artist page can be accessed by clicking on any of the popular artists (Scroll Down in the home page to see it).
+
+Features:
+1. Responsive
+2. Single Playlist Screen
+3. Bottom Music Player
+4. Home Screen Layout and Carousel
+
+and fullfilled all other requirements specified in the evaluation parameters.
 
 Regards
 Bhagesh Bhutani

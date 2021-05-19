@@ -1,6 +1,7 @@
 html{
     font-family: sans-serif;
-    background-color: #120732;
+    /* background-color: #120732; */
+    background-color: #0c1027;
     color: white;
     margin: 0;
 }
@@ -67,7 +68,8 @@ header{
     padding: 0.4rem;
     width: 15rem;
     border-radius: 0.3rem;
-    background-color: #1e0d53;
+    /* background-color: #1e0d53; */
+    background-color: #0e153a;
 }
 
 @keyframes pulse{
@@ -107,6 +109,7 @@ header{
 
 main{
     display: flex;
+    justify-content: space-around;
 }
 
 .section{
@@ -123,7 +126,7 @@ main>div{
 }
 
 .main-content{
-    width: 75%;
+    flex-basis: 70%;
     overflow-y: auto;
     overflow-x: hidden;
     height: 85vh;
@@ -132,7 +135,7 @@ main>div{
 .right-side-queue{
     margin-top: 1rem;
     vertical-align: top;
-    width: 25%;
+    flex-basis: 30%;
 }
 
 .carousel-container{
@@ -230,13 +233,13 @@ main>div{
     width: 16%;
     vertical-align: middle;
     margin: 0.4rem;
-    box-shadow: 0px 0px 10px 5px rgb(223 115 114);
+    box-shadow: 0px 0px 10px 5px rgba(109, 87, 86, 0.603);
     border-radius: 2px;
     transition: 0.2s linear;
 }
 
 .song-item img:hover{
-    box-shadow: 0px 0px 15px 1px rgb(223 115 114);
+    box-shadow: 0px 0px 15px 1px rgba(109, 87, 86, 0.603);
 }
 
 .song-item>div{
@@ -332,7 +335,8 @@ main>div{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #1e0d538a;
+    /* background-color: #1e0d538a; */
+    background-color: #0e153a;
 }
 
 .categories-card{
@@ -376,9 +380,6 @@ main>div{
 }
 
 .latest-english-card{
-    /* flex-basis: 20%; */
-    /* height: 10rem; */
-    /* width: 10rem; */
     margin: 0.2rem;
     padding: 1.5rem;
     border-radius: 10px;
@@ -396,6 +397,115 @@ main>div{
     width: 10rem;
     background-size: 100%;
     background-position: center;
+}
+
+/* Music Player */
+
+.music-player{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Music Player Controls */
+
+.song-details{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.music-player-controls{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.other-controls{
+    flex-basis: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.music-player-drag{
+    width: 100%;
+}
+
+.music-player-controls input[type = "range"]{
+    width: 55%;
+    height: 3px;
+    vertical-align: middle;
+    color: #32e081;
+}
+
+.other-controls input[type = "range"]{
+    width: 70%;
+    height: 2.5px;
+}
+
+.music-player-drag>div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.music-player-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+
+.music-player-buttons>i{
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.music-player-buttons>i:hover{
+    color: white;
+}
+
+.fa-play-circle{
+    font-size: 1.7rem;
+}
+
+.gray{
+    color: #777777;
+}
+
+.song-details>div{
+    margin: 0.15rem;
+}
+
+.song-cover{
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+}
+
+.song-text>div{
+    white-space: nowrap;
+}
+
+.song-icons>i{
+    transition: 0.2s ease-in-out;
+}
+
+.song-icons>i:hover{
+    color: white;
+    cursor: pointer;
 }
 
 /* Media Queries for Desktop first Approach */
@@ -443,6 +553,12 @@ main>div{
         height: 7.5rem;
         width: 7.5rem;
     }
+    .music-player-buttons{
+        width: 60%;
+    }
+    .song-details{
+        flex-basis: 5%;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -478,6 +594,24 @@ main>div{
     .latest-english-img{
         height: 6rem;
         width: 6rem;
+    }
+    .logo{
+        width: 4.5rem;
+    }
+    .player-disappear{
+        display: none;
+    }
+    .song-details{
+        flex-basis: 3%;
+    }
+    .music-player-controls{
+        flex-basis: 70%;
+    }
+    .music-player-buttons{
+        width: 70%;
+    }
+    .other-controls input[type = "range"]{
+        width: 75%;
     }
 }
 
@@ -520,5 +654,14 @@ main>div{
     .latest-english-img{
         height: 4rem;
         width: 4rem;
+    }
+    .logo{
+        width: 4rem;
+    }
+    .fa-expand-alt{
+        display: none;
+    }
+    .other-controls input[type = "range"]{
+        width: 92%;
     }
 }
