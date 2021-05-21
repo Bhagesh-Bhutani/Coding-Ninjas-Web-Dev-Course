@@ -1,0 +1,17 @@
+#outer{
+    height: 20rem;
+    width: 20rem;
+    background-color: red;
+}
+
+#inner1{
+    height: 50%;
+    width: 50%;
+    background-color: aqua;
+}
+
+#inner2{
+    height: 50%;
+    width: 50%;
+    background-color: black;
+}
