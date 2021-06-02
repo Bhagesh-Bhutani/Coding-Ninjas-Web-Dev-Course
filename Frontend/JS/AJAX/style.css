@@ -1,0 +1,64 @@
+*{
+    font-family: sans-serif;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(26, 26, 63)
+}
+
+header{
+    text-align: center;
+}
+
+@keyframes button-animate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+
+    25%{
+        transform: rotateZ(3deg);
+    }
+
+    50%{
+        transform: rotateZ(-3deg);
+    }
+
+    75%{
+        transform: rotateZ(3deg);
+    }
+
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+.button-section{
+    text-align: center;
+}
+
+.button-section button{
+    all: unset;
+    cursor: pointer;
+    background-image: linear-gradient(to right,#f12711,#f5af19);
+    padding: 1rem 2rem;
+    border-radius: 100rem;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.button-section button:hover{
+    animation-name: button-animate;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+}
+
+.image-section{
+    margin-top: 1rem;
+    text-align: center;
+}
