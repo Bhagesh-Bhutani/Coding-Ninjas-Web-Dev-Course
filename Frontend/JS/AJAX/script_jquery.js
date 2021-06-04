@@ -21,10 +21,12 @@ btn.click((e) => {
     // });
 
     // Method 2 : $.get() method
-    $.get("https://dog.ceo/api/breeds/image/random",(data) => {
+    var obj = $.get("https://dog.ceo/api/breeds/image/random",(data) => {
         console.log('Via jQuery get');
         img.attr('src',data.message);
     });
+
+    console.log(obj);
 });
 
 // btn.click((e) => {
