@@ -8,7 +8,15 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', function(req,res){
-    return res.render('home');
+    return res.render('home', {
+        title: 'This is backend sent title'
+    });
+});
+
+app.get('/practice', (req,res) => {
+    return res.render('playground',{
+        title: 'play title'
+    });
 });
 
 app.listen(port, function(err){
