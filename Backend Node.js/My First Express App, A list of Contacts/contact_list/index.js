@@ -4,8 +4,24 @@ const port = 8000;
 
 const app = express();
 
+app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+var contactList = [
+    {
+        name: "Bhagesh Bhutani",
+        phone: "1111111111"
+    },
+    {
+        name: "Rohit",
+        phone: "1234567890"
+    },
+    {
+        name: "Atul",
+        phone: "2222222222"
+    }
+];
 
 app.get('/', function(req,res){
     return res.render('home', {
@@ -14,9 +30,15 @@ app.get('/', function(req,res){
 });
 
 app.get('/practice', (req,res) => {
-    return res.render('playground',{
-        title: 'play title'
+    return res.render('practice',{
+        title: 'Contact List',
+        contact_list: contactList
     });
+});
+
+app.post('/create-contact', function(req,res){
+    contactList.push(req.body);
+    return res.redirect('back');
 });
 
 app.listen(port, function(err){
