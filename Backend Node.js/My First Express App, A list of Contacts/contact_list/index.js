@@ -4,9 +4,30 @@ const port = 8000;
 
 const app = express();
 
-app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+// middlewares
+
+app.use(express.urlencoded({extended: true}));
+app.use(express.static(path.join(__dirname, 'assets')));
+
+// my custom middlewares
+
+// app.use(function(req,res,next){
+//     console.log("Middleware 1");
+//     req.myName = "Bhagesh";
+//     return res.send('middleware 1 response');
+//     next();
+// });
+
+// app.use(function(req,res,next){
+//     console.log("Middleware 2");
+//     console.log("From m2 name is", req.myName);
+//     req.myName = "fefefeffffff";
+//     req.nn = "nn";
+//     next();
+// });
 
 var contactList = [
     {
@@ -29,7 +50,7 @@ app.get('/', function(req,res){
     });
 });
 
-app.get('/practice', (req,res) => {
+app.get('/practice', (req,res,next) => {
     return res.render('practice',{
         title: 'Contact List',
         contact_list: contactList
@@ -40,6 +61,12 @@ app.post('/create-contact', function(req,res){
     contactList.push(req.body);
     return res.redirect('back');
 });
+
+//after all endpoints, this middleware executes if next called
+// app.use(function(req,res,next){
+//     console.log("from end midddleware", req.myName, req.nn);
+//     next();
+// })
 
 app.listen(port, function(err){
     if(err){
