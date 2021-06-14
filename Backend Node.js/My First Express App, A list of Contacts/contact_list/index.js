@@ -16,8 +16,8 @@ app.use(express.static(path.join(__dirname, 'assets')));
 
 // app.use(function(req,res,next){
 //     console.log("Middleware 1");
-//     req.myName = "Bhagesh";
-//     return res.send('middleware 1 response');
+//     // req.myName = "Bhagesh";
+//     // return res.send('middleware 1 response');
 //     next();
 // });
 

@@ -7,31 +7,41 @@
     <title>
         <%= title %>
     </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href='/css/practice.css'>
 </head>
 <body>
-    <h1>Contacts List</h1>
+    <header>
+        <h1>My Contacts App</h1>
+    </header>
 
-    <ul>
-        <% for(let contact of contact_list) { %>
-            <li>
-                <p> <%= contact.name %> </p>
-                <p> <%= contact.phone %> </p> 
-            </li>
-        <% } %>  
-    </ul>
+    <div class = "container">
+        <ul>
+            <% for(let contact of contact_list) { %>
+                <li class = "list-item">
+                    <div class = "delete-btn-container">
+                        <a href = "#" class = "delete-btn"><i class = "fas fa-times"></i></a>
+                    </div>
+                    <div class = "contact-details">
+                        <p> <%= contact.name %> </p>
+                        <p> <%= contact.phone %> </p> 
+                    </div>
+                </li>
+            <% } %>  
+        </ul>
 
-    <form action = "/create-contact" method = "POST">
-        <div>
+        <form class = "myform" action = "/create-contact" method = "POST">
+
             <input type = "text" name = "name" placeholder="Enter name" required>
-        </div>
-        <div>
+
+
             <input type="number" name = "phone" placeholder="Enter Phone No." required>
-        </div>
-        <div>
-            <button type = "submit">Submit</button>
-        </div>
-    </form>
+
+
+            <button type = "submit">Add</button>
+
+        </form>
+    </div>
 
     <script src = '/js/practice.js'></script>
 </body>

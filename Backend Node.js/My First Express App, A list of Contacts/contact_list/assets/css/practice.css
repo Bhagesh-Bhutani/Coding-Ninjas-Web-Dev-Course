@@ -5,3 +5,118 @@ html{
 body{
     margin: 0;
 }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container>ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+
+.list-item{
+    display: flex;
+    background-color: darkblue;
+    color: white;
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    padding: 0 0.2rem;
+    border-radius: 0.2rem;
+    transition: background-color 0.3s;
+}
+
+.list-item:hover{
+    background-color: rgb(14, 14, 77);
+}
+
+.contact-details{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.delete-btn-container{
+    padding: 0.1rem;
+}
+
+.delete-btn-container>a{
+    transition: 0.2s;
+}
+
+.delete-btn-container>a:hover{
+    color: red;
+}
+
+.myform{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+input{
+    all: unset;
+    border-bottom: solid black 1px;
+    width: 35%;
+}
+
+button[type="submit"]{
+    all: unset;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    padding: 1rem 1.4rem;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover{
+    background-color: rgb(78, 75, 75);
+}
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 992px){
+    .container>ul{
+        width: 65%;
+    }
+
+    .myform{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container>ul{
+        width: 90%;
+    }
+
+    .myform{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .container>ul{
+        width: 95%;
+    }
+
+    .myform{
+        width: 95%;
+    }
+}
