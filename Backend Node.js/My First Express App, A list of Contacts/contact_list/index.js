@@ -50,11 +50,22 @@ app.get('/', function(req,res){
     });
 });
 
-app.get('/practice', (req,res,next) => {
+app.get('/practice', (req,res) => {
     return res.render('practice',{
         title: 'Contact List',
         contact_list: contactList
     });
+});
+
+app.get('/delete-contact', function(req,res){
+    let delete_index = contactList.findIndex(contact => contact.phone == req.query.phone);
+    if(delete_index != -1){
+        contactList.splice(delete_index, 1);
+        return res.redirect('back');
+    }
+    // Item not found
+    res.status(404).send('The requested contact to be deleted was not found.');
+
 });
 
 app.post('/create-contact', function(req,res){

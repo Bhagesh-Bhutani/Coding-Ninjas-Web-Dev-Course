@@ -20,7 +20,7 @@
             <% for(let contact of contact_list) { %>
                 <li class = "list-item">
                     <div class = "delete-btn-container">
-                        <a href = "#" class = "delete-btn"><i class = "fas fa-times"></i></a>
+                        <a href = "/delete-contact/?phone=<%= contact.phone %>"  class = "delete-btn"><i class = "fas fa-times"></i></a>
                     </div>
                     <div class = "contact-details">
                         <p> <%= contact.name %> </p>

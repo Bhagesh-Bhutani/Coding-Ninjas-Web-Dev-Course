@@ -55,11 +55,13 @@ header{
 }
 
 .delete-btn-container>a{
-    transition: 0.2s;
+    display: inline-block;
+    transition: 0.3s;
 }
 
 .delete-btn-container>a:hover{
     color: red;
+    transform: rotateZ(180deg);
 }
 
 .myform{
