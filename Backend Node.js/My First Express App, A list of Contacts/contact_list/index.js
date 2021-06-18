@@ -12,6 +12,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'assets')));
 
+const db = require('./config/mongoose');
+const Contact = require('./models/contact');
+
 // my custom middlewares
 
 // app.use(function(req,res,next){
