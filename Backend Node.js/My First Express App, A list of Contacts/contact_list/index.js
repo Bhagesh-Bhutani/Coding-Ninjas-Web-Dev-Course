@@ -54,26 +54,51 @@ app.get('/', function(req,res){
 });
 
 app.get('/practice', (req,res) => {
-    return res.render('practice',{
-        title: 'Contact List',
-        contact_list: contactList
+    Contact.find({}, function(err, contacts){
+        console.log(contacts);
+        res.render('practice', {
+            title: 'Contacts App',
+            contact_list: contacts
+        });
     });
+    // return res.render('practice',{
+    //     title: 'Contact List',
+    //     contact_list: contactList
+    // });
 });
 
 app.get('/delete-contact', function(req,res){
-    let delete_index = contactList.findIndex(contact => contact.phone == req.query.phone);
-    if(delete_index != -1){
-        contactList.splice(delete_index, 1);
-        return res.redirect('back');
-    }
-    // Item not found
-    res.status(404).send('The requested contact to be deleted was not found.');
-
+    // let delete_index = contactList.findIndex(contact => contact.phone == req.query.phone);
+    // if(delete_index != -1){
+    //     contactList.splice(delete_index, 1);
+    //     return res.redirect('back');
+    // }
+    // // Item not found
+    // res.status(404).send('The requested contact to be deleted was not found.');
+    Contact.findByIdAndDelete(req.query.id, function(err, contact){
+        if(err){
+            console.log(err);
+            return;
+        }
+        res.redirect('back');
+    });
 });
 
 app.post('/create-contact', function(req,res){
-    contactList.push(req.body);
-    return res.redirect('back');
+    // contactList.push(req.body);
+    // return res.redirect('back');
+    Contact.create({
+        name: req.body.name,
+        phone: req.body.phone
+    }, function(err, newContact){
+        if(err){
+            console.log("Error ehile creating Document.");
+            return;
+        }
+
+        console.log("*****" + newContact);
+        res.redirect('back');
+    });
 });
 
 //after all endpoints, this middleware executes if next called
