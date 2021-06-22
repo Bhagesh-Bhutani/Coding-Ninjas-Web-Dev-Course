@@ -56,7 +56,7 @@ app.get('/', function(req,res){
 app.get('/practice', (req,res) => {
     Contact.find({}, function(err, contacts){
         console.log(contacts);
-        res.render('practice', {
+        return res.render('practice', {
             title: 'Contacts App',
             contact_list: contacts
         });
@@ -80,7 +80,7 @@ app.get('/delete-contact', function(req,res){
             console.log(err);
             return;
         }
-        res.redirect('back');
+        return res.redirect('back');
     });
 });
 
@@ -97,7 +97,7 @@ app.post('/create-contact', function(req,res){
         }
 
         console.log("*****" + newContact);
-        res.redirect('back');
+        return res.redirect('back');
     });
 });
 

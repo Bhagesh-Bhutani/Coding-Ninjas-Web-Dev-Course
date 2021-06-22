@@ -12,9 +12,8 @@ db.once('open', function(){
 });
 
 // this catch is for initial error handling
-mongoose.connect('mongodb://localhost/contacts-db', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost/contacts-db-v2', {useNewUrlParser: true, useUnifiedTopology: true})
 .catch(err => {
     console.error("Initial error");
     console.log(err);
 });
-
