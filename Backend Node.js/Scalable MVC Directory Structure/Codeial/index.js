@@ -9,11 +9,18 @@ const expressLayouts = require('express-ejs-layouts');
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+// Middleware to set up Static File Access
+app.use(express.static('./assets'));
+
 // Middleware to parse the requests body of post requests
 app.use(express.urlencoded({extended: true}));
 
 // Middleware to set up Layouts
 app.use(expressLayouts);
+
+// Extract styles and scripts from the subpages into the layout
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 
 // use express router
 app.use('/', require('./routes'));
