@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/user_sign_up.css">
+
+<p class = "already-account-para">
+    Already have an account? 
+    <a href="/signin">
+        Login <i class="fas fa-arrow-right"></i>
+    </a>
+</p>
+
+<div class = "user-heading">
+    <h1>Sign Up!</h1>
+</div>
+<div class = "outer-wrapper">
+    <form action = "/signup" method = "POST">
+        <div>
+            <div class = "label-wrapper">
+                <label for="name">Username</label>
+            </div>
+            <input type="text" id = "name" name = "name" required>
+        </div>
+        <div>
+            <div class = "label-wrapper">
+                <label for="email">Email Address</label>
+            </div>
+            <input type = "email" id = "email" name = "email" required>
+        </div>
+        <div>
+            <div class = "label-wrapper">
+                <label for="password">Password</label>
+            </div>
+            <input type="password" id = "password" name = "password" required>
+        </div>
+        <div class = "submit-container">
+            <button type = "submit">Sign Up <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </form>
+</div>
