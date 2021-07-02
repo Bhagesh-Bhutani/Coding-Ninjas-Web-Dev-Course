@@ -4,6 +4,7 @@ const app = express();
 const port = 8000;
 
 const expressLayouts = require('express-ejs-layouts');
+const cookieParser = require('cookie-parser');
 
 const db = require('./config/mongoose');
 
@@ -16,6 +17,9 @@ app.use(express.static('./assets'));
 
 // Middleware to parse the requests body of post requests
 app.use(express.urlencoded({extended: true}));
+
+// Middleware for cookie parser
+app.use(cookieParser());
 
 // Middleware to set up Layouts
 app.use(expressLayouts);
