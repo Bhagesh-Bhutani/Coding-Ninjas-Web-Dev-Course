@@ -2,7 +2,7 @@
 module.exports.user_sign_in_action = function(req, res){
     console.log(req.cookies);
     // to change value of cookie from browser
-    res.cookie('user_id', 25);
+    // res.cookie('user_id', 25);
     return res.render('user_sign_in', {
         title: 'Login'
     });
