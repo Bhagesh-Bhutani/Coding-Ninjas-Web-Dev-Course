@@ -41,8 +41,41 @@ passport.deserializeUser(function(id, done){
             return done(err);
         }
 
-        return done(null, user);
+        return done(null, user); // deserialized and put the user inside done callback, this user will be stored in req.user by passport
     });
 });
+
+// Setting up middlewares for checking authenticated state and redirecting accordingly
+// passport defined req.isAuthenticated
+
+passport.checkAuthentication = function(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+
+    // User is not Authenticated
+    return res.redirect('/signin');
+}
+
+// Middleware for login and signup pages, if authenticated, redirect to profile page, else call next and let
+// endpoint actions do the job
+
+passport.login_signup_handler = function(req, res, next){
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
+
+    // Not Authenticated, so call next and endpoint handlers will render the requested page
+    return next();
+}
+
+// Middleware to set the authenticated user which is to be given to views, via res.locals
+passport.setAuthenticatedUser = function(req, res, next){
+    if(req.isAuthenticated()){
+        res.locals.user = req.user; // req.user contains the authenticated user
+    }
+
+    return next();
+}
 
 module.exports = passport;

@@ -4,7 +4,7 @@ const app = express();
 const port = 8000;
 
 const expressLayouts = require('express-ejs-layouts');
-const cookieParser = require('cookie-parser');
+// const cookieParser = require('cookie-parser');
 
 const db = require('./config/mongoose');
 
@@ -13,7 +13,7 @@ const session = require('express-session');
 
 // For passport, require both passport and passport-local config module
 const passport = require('passport');
-const passportLocal = require('./config/passport-local-strategy');
+const passportLocal = require('./config/passport-local-strategy'); // runs this code to define all the functions in passport
 
 // Setting up the view engine
 app.set('view engine', 'ejs');
@@ -26,7 +26,7 @@ app.use(express.static('./assets'));
 app.use(express.urlencoded({extended: true}));
 
 // Middleware for cookie parser
-app.use(cookieParser());
+// app.use(cookieParser());
 
 // Middleware to set up Layouts
 app.use(expressLayouts);
@@ -50,6 +50,9 @@ app.use(session({
 // Passportjs middlewares
 app.use(passport.initialize()); // Initializes passportjs
 app.use(passport.session()); // Used to get the true deserialized object from cookie
+
+//Middleware to set the authenticated user in req.locals for the views
+app.use(passport.setAuthenticatedUser);
 
 // use express router
 app.use('/', require('./routes'));
