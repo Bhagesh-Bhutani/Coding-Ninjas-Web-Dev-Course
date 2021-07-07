@@ -4,16 +4,21 @@ const app = express();
 const port = 8000;
 
 const expressLayouts = require('express-ejs-layouts');
+// Cookie Parser not needed now in newer versions of express-session since 1.5.0
 // const cookieParser = require('cookie-parser');
 
 const db = require('./config/mongoose');
 
 // used for session cookie
+// Using cookie-parser may result in issues if the secret is not the same between express-session and cookie-parser
 const session = require('express-session');
 
 // For passport, require both passport and passport-local config module
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy'); // runs this code to define all the functions in passport
+
+// MongoStore for persistent sessions, to maintain sessions even when server is restarted
+const MongoStore = require('connect-mongo')(session);
 
 // Setting up the view engine
 app.set('view engine', 'ejs');
@@ -36,6 +41,7 @@ app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
 
 // Session middleware
+// mongo store is used to store the session cookie in MongoDB
 app.use(session({
     name: 'codeial',
     // TODO change the secret before deployment in production mode
@@ -44,7 +50,13 @@ app.use(session({
     resave: false,
     cookie: {
         maxAge: (1000 * 60 * 100)
-    }
+    },
+    store: new MongoStore({
+        mongooseConnection: db,
+        autoRemove: 'disabled'
+    }, function(err){
+        console.log(err || 'connect-mongo setup ok');
+    })
 }));
 
 // Passportjs middlewares
