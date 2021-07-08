@@ -4,8 +4,13 @@ const passport = require('passport');
 // which optimises things, and which preserves the keys we defined in passport
 // which correspond to middlewares we defined in passport-local-strategy.js module
 
-module.exports.users_action = function(req,res){
+module.exports.users_action = function(req, res){
     return res.render('user_profile', {
         title: "User Profile"
     });
 };
+
+module.exports.destroySession = function(req, res){
+    req.logout();
+    return res.redirect('/');
+}

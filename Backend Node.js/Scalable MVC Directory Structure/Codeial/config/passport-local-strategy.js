@@ -69,6 +69,16 @@ passport.login_signup_handler = function(req, res, next){
     return next();
 }
 
+// Middleware to handle requests at /users/sign-out
+passport.sign_out_handler = function(req, res, next){
+    if(req.isAuthenticated()){
+        return next(); // next called for sign_out_action to perform sign out process
+    }
+
+    // Here user is not Authenticated
+    return res.redirect('/signin');
+}
+
 // Middleware to set the authenticated user which is to be given to views, via res.locals
 passport.setAuthenticatedUser = function(req, res, next){
     if(req.isAuthenticated()){
