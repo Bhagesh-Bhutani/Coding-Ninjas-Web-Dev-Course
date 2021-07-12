@@ -12,7 +12,6 @@ const db = require('./config/mongoose');
 // used for session cookie
 // Using cookie-parser may result in issues if the secret is not the same between express-session and cookie-parser
 const session = require('express-session');
-
 // For passport, require both passport and passport-local config module
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy'); // runs this code to define all the functions in passport
@@ -20,9 +19,21 @@ const passportLocal = require('./config/passport-local-strategy'); // runs this 
 // MongoStore for persistent sessions, to maintain sessions even when server is restarted
 const MongoStore = require('connect-mongo')(session);
 
+// Require node-sass-middleware
+const sassMiddleware = require('node-sass-middleware');
+
 // Setting up the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+// Middle for sass
+app.use(sassMiddleware({
+    src: './assets/scss',
+    dest: './assets/css',
+    debug: true,
+    outputStyle: 'extended',
+    prefix: '/css'
+}));
 
 // Middleware to set up Static File Access
 app.use(express.static('./assets'));
