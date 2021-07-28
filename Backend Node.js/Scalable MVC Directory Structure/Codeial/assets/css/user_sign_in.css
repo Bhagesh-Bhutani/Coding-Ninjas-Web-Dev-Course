@@ -3,13 +3,9 @@ body{
     /* background by SVGBackgrounds.com */
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
-
 .outer-wrapper{
     text-align: center;
+    color: black;
 }
 
 .label-wrapper{
