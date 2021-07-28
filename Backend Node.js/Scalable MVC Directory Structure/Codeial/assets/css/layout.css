@@ -36,3 +36,7 @@ header {
     .sign-container a:hover {
       color: black;
       background-color: white; }
+
+@media screen and (max-width: 576px) {
+  .sign-container h1 {
+    display: none; } }

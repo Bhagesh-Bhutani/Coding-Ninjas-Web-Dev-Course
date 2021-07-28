@@ -17,12 +17,12 @@ main {
 .homepage-container {
   display: flex;
   justify-content: space-between;
-  height: 60vh;
+  height: 80vh;
   margin-top: 1rem;
   padding: 0 2rem; }
 
 .homepage-content {
-  flex-basis: 70%;
+  flex-basis: 60%;
   font-size: 1.5rem;
   box-sizing: border-box;
   padding: 0 3rem; }
@@ -41,16 +41,17 @@ main {
       color: white; }
 
 .homepage-bg {
-  background-image: url("/images/homepage-bg.png.png");
+  background-image: url("/images/social-bg.png");
   background-size: contain;
   background-repeat: no-repeat;
-  flex-basis: 30%; }
+  flex-basis: 40%; }
 
 @media screen and (max-width: 992px) {
   .homepage-bg {
     display: none; }
   .homepage-content {
     flex-basis: 100%;
+    padding: 0 0;
     text-align: center; }
   .homepage-container {
     padding: 0 0; } }
